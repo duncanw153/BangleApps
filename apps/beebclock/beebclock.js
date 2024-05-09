@@ -222,7 +222,8 @@ const drawAll = (force) => {
   if (face_changed) {
     // Redraw the face and hands onto the buffer G1.
     faceImg = drawFace(G1);
-    drawHand(G1, Math.PI*hours/6, HW2, RC1, HR);
+    // Ensure that the hour hand approaches the next hour in proportion to position of the minute hand
+    drawHand(G1, Math.PI* (hours/6 + minutes/360), HW2, RC1, HR);
     drawHand(G1, Math.PI*minutes/30, MW2, RC1, MR);
   }
 
@@ -264,7 +265,11 @@ const drawAll = (force) => {
     // and possibly add the second hand
     if (with_seconds) {
       let a = 2.0 * Math.PI * seconds / 60.0;
+      g.setColor(1,0,0); //Colour the second hand Red
       g.drawRotLine(Math.sin(a), Math.cos(a), CX, CY+TM, RC1, R1);
+      //Make the second hand a little fatter offset by 1
+      g.drawRotLine(Math.sin(a), Math.cos(a), CX, CY+TM, RC1, R1);
+      g.setColor(1,1,1); //Restore colour
     }
 
     // And draw widgets if we're in that mode
