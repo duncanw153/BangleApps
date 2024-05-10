@@ -2,3 +2,4 @@
 0.02: Shrink hand images to save memory
 0.03: Tell clock widgets to hide.
 0.04: Minor code improvements
+0.05: Change Second hand to Red for visibility
