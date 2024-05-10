@@ -144,7 +144,7 @@ function drawHands() {
   g.setColor(g.theme.fg);
   g.drawImages(handLayers);
   g.setColor(1,0,0);
-  g.drawImages(SecLayers);
+  g.drawImages(SecLayer);
   g.setColor(g.theme.fg);
 }
 
