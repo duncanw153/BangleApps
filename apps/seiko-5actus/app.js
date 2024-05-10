@@ -132,7 +132,8 @@ function drawHands() {
      image:imgMin,
      rotate:minAngle,
      center:true
-    },
+    }];
+  const SecLayer = [
     {x:cx,
      y:cy,
      image:imgSec,
@@ -142,6 +143,9 @@ function drawHands() {
 
   g.setColor(g.theme.fg);
   g.drawImages(handLayers);
+  g.setColor(1,0,0);
+  g.drawImages(SecLayers);
+  g.setColor(g.theme.fg);
 }
 
 function drawBackground() {
