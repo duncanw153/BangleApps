@@ -4,7 +4,7 @@
 // https://github.com/tomgidden
 
 const storage = require("Storage");
-const filename = 'beebjson';
+const filename = 'beebRjson';
 var timeout;
 
 require('FontTeletext10x18Ascii').add(Graphics);
