@@ -2,6 +2,7 @@
 // Beebclock
 // © 2020, Tom Gidden
 // https://github.com/tomgidden
+// Updated for red second hand and hour hand proportional based on minutes
 
 const storage = require("Storage");
 const filename = 'beebRjson';
@@ -222,7 +223,7 @@ const drawAll = (force) => {
   if (face_changed) {
     // Redraw the face and hands onto the buffer G1.
     faceImg = drawFace(G1);
-    drawHand(G1, Math.PI* (hours/6 + minutes/360), HW2, RC1, HR); //Make the hour hand approach the next hour based on the minutes 
+    drawHand(G1, Math.PI* (hours/6 + minutes/360), HW2, RC1, HR); //Make the hour hand approach the next hour based on the minutes
     drawHand(G1, Math.PI*minutes/30, MW2, RC1, MR);
   }
 
