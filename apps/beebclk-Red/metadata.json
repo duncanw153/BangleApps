@@ -1,0 +1,16 @@
+{
+  "id": "beebclkRed",
+  "name": "Beeb Clock Red",
+  "version": "0.01",
+  "description": "Clock face based on BBC TV clock with Second Hand in Red",
+  "icon": "beebclock.png",
+  "type": "clock",
+  "tags": "clock",
+  "screenshots": [{"url":"bangle1-beeb-clock-screenshot.png"}],
+  "supports": ["BANGLEJS"],
+  "allow_emulator": true,
+  "storage": [
+    {"name":"beebclkRed.app.js","url":"beebclk-Red.js"},
+    {"name":"beebclock.img","url":"beebclock-icon.js","evaluate":true}
+  ]
+}
