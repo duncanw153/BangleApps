@@ -1,5 +1,1 @@
-0.01: Initial Release
-0.02: Shrink hand images to save memory
-0.03: Tell clock widgets to hide.
-0.04: Minor code improvements
-0.05: Change Second hand to Red for visibility
+0.01: Initial Release based on Seiko-5actus but red sec hand
