@@ -1,6 +1,6 @@
 {
-  "id": "beebclock",
-  "name": "Beeb Clock",
+  "id": "Beebclock2",
+  "name": "Beeb Clock 2",
   "version": "0.07",
   "description": "Clock face that may be coincidentally familiar to BBC viewers",
   "icon": "beebclock2.png",
@@ -10,7 +10,7 @@
   "supports": ["BANGLEJS2"],
   "allow_emulator": true,
   "storage": [
-    {"name":"beebclock2.app.js","url":"beebclock2.js"},
-    {"name":"beebclock2.img","url":"beebclock2-icon.js","evaluate":true}
+    {"name":"Beebclock2.app.js","url":"beebclock2.js"},
+    {"name":"Beebclock2.img","url":"beebclock2-icon.js","evaluate":true}
   ]
 }
