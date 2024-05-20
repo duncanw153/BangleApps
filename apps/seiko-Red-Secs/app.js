@@ -137,6 +137,8 @@ function drawHands() {
 }
 
 function drawSec() {
+  let d = new Date();
+
   let sec = d.getSeconds();
 
   let twoPi = 2*Math.PI;
@@ -181,13 +183,14 @@ function displayRefresh1() {
   Bangle.drawWidgets();
 
   let Pause = 1000 - (Date.now() % 1000);
-  Timeout = setTimeout(displayRefresh,Pause);
+  Timeout = setTimeout(displayRefresh1,Pause);
 }
 
 function displayRefresh() {
   g.clear(true);
   drawBackground();
   drawHands();
+  //drawSec();
   Bangle.drawWidgets();
 
   let Pause = 60000 - (Date.now() % 60000);
