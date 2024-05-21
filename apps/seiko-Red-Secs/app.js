@@ -54,6 +54,8 @@ let cy = H/2;
 // Draw on every second if unlocked or charging, minute otherwise, start at with seconds on load
 var drawTimeout;
 var drawInterval = 1000;
+// If unlocked draw second hand for a minute
+var drawforminute = 60;
 
 // schedule a draw for the next interval
 
@@ -200,11 +202,15 @@ function displayRefresh() {
   drawHands();
   // draw the seconds only if unlocked, set next timeout
   if(!Bangle.isLocked() || Bangle.isCharging()) {
-	drawInterval = 1000;
+    drawInterval = 1000;
+    drawforminute = 60;
     drawSec();
   }
   else
-    drawInterval = 60000;
+    if(drawforminute >0)
+      drawforminute = drawforminute - 1;
+    else
+      drawInterval = 60000;
 
   // Schedule next draw
   queueDraw();
