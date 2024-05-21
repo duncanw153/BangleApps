@@ -61,17 +61,17 @@ function queueDraw() {
   if (drawTimeout) clearTimeout(drawTimeout);
   drawTimeout = setTimeout(function() {
     drawTimeout = undefined;
-    draw();
+    displayRefresh();
   }, drawInterval - (Date.now() % drawInterval));
 }
 
 // Update display and timeout on lock/unlock and charge state change
 Bangle.on('lock',on=>{
-  draw();
+  displayRefresh();
 });
 
 Bangle.on('charging',charging=>{
-  draw();
+  displayRefresh();
 });
 
 /* Custom version of Bangle.drawWidgets (does not clear the widget areas) Thanks to rozek */
