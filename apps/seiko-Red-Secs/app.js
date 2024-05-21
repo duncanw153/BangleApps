@@ -207,11 +207,12 @@ function displayRefresh() {
     drawSec();
   }
   else
+  {
     if(drawforminute >0)
       drawforminute = drawforminute - 1;
     else
       drawInterval = 60000;
-
+  }
   // Schedule next draw
   queueDraw();
   Bangle.drawWidgets();
