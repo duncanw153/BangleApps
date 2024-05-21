@@ -1,8 +1,8 @@
-# Seiko 5actus
+# Seiko Red Seconds
 
 ![](screenshot.png)
 
-This is built on the knowledge of what I gained through designing the rolex watch face and improves on it by getting more done right at the start.
+This is built on the knowledge of what I gained through designing the Seiko 5actus watch face and improves on it by getting more done right at the start.
 
 This watch is modeled after one I personally own and love, I have spent quite a bit of time designing this in a pixel art editor to try and make it as clean as possible and am quite happy with how it came out.
 
