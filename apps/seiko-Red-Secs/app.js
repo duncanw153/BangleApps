@@ -50,11 +50,29 @@ let W = g.getWidth();
 let H = g.getHeight();
 let cx = W/2;
 let cy = H/2;
-let Timeout;
 
-Bangle.setUI("clock");
-// load widgets after 'setUI' so they're aware there is a clock active
-Bangle.loadWidgets();
+// Draw on every second if unlocked or charging, minute otherwise, start at with seconds on load
+var drawTimeout;
+var drawInterval = 1000;
+
+// schedule a draw for the next interval
+
+function queueDraw() {
+  if (drawTimeout) clearTimeout(drawTimeout);
+  drawTimeout = setTimeout(function() {
+    drawTimeout = undefined;
+    draw();
+  }, drawInterval - (Date.now() % drawInterval));
+}
+
+// Update display and timeout on lock/unlock and charge state change
+Bangle.on('lock',on=>{
+  draw();
+});
+
+Bangle.on('charging',charging=>{
+  draw();
+});
 
 /* Custom version of Bangle.drawWidgets (does not clear the widget areas) Thanks to rozek */
 
@@ -175,33 +193,35 @@ function drawBackground() {
 
 /* Refresh the display every second */
 
-function displayRefresh1() {
-  g.clear(true);
-  drawBackground();
-  drawHands();
-  drawSec();
-  Bangle.drawWidgets();
-
-  let Pause = 1000 - (Date.now() % 1000);
-  Timeout = setTimeout(displayRefresh1,Pause);
-}
 
 function displayRefresh() {
   g.clear(true);
   drawBackground();
   drawHands();
-  //drawSec();
-  Bangle.drawWidgets();
+  // draw the seconds only if unlocked, set next timeout
+  if(!Bangle.isLocked() || Bangle.isCharging()) {
+	drawInterval = 1000;
+    drawSec();
+  }
+  else
+    drawInterval = 60000;
 
-  let Pause = 60000 - (Date.now() % 60000);
-  Timeout = setTimeout(displayRefresh,Pause);
+  // Schedule next draw
+  queueDraw();
+  Bangle.drawWidgets();
 }
 
-Bangle.on('lcdPower', (on) => {
-  if (on) {
-    if (Timeout != null) { clearTimeout(Timeout); Timeout = undefined;}
-    displayRefresh1();
-  }
+Bangle.on('lcdPower', on=> {
+    displayRefresh();
 });
 
+
+Bangle.setUI("clock");
+// load widgets after 'setUI' so they're aware there is a clock active
+Bangle.loadWidgets();
+Bangle.setLocked(false);
+
+// Clear the screen once, at startup
+g.clear();
+// draw immediately at first
 displayRefresh();
