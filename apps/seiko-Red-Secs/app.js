@@ -1,3 +1,7 @@
+// Increase Battery life for only drawing the second hand for a minute
+// If unlocked draw second hand for a minute
+let drawforMinute;
+
 var imgBg = {
   width : 176, height : 176, bpp : 2,
   transparent : 1,
@@ -54,8 +58,6 @@ let cy = H/2;
 // Draw on every second if unlocked or charging, minute otherwise, start at with seconds on load
 var drawTimeout;
 var drawInterval = 1000;
-// If unlocked draw second hand for a minute
-var drawforminute = 60;
 
 // schedule a draw for the next interval
 
@@ -208,8 +210,10 @@ function displayRefresh() {
   }
   else
   {
-    if(drawforminute >0)
-      drawforminute = drawforminute - 1;
+    if(drawforminute >0) {
+      drawSec();
+      drawforminute -= 1;
+    }
     else
       drawInterval = 60000;
   }
@@ -221,6 +225,7 @@ function displayRefresh() {
 Bangle.on('lcdPower', on=> {
     displayRefresh();
 });
+
 
 
 Bangle.setUI("clock");

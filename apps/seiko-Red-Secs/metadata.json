@@ -4,7 +4,7 @@
     "icon": "seiko-Red-Secs.png",
     "screenshots": [{"url":"screenshot.png"}],
     "version": "0.02",
-    "description": "A watch designed after then Seiko from the 1970's with Red Sec hand",
+    "description": "A Seiko Style watch desiged from the 1970's with Red Sec hand",
     "tags": "clock",
     "type": "clock",
     "supports":["BANGLEJS2"],
