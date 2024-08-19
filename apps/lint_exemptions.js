@@ -196,12 +196,6 @@ module.exports = {
       "no-undef"
     ]
   },
-  "apps/sixths/sixths.app.js": {
-    "hash": "2a4676828bdf78df052df402de34e6f1abd1c847ebe0d193fc789cd6e9dd0e5c",
-    "rules": [
-      "no-undef"
-    ]
-  },
   "apps/scribble/app.js": {
     "hash": "6d13abd27bab8009a6bdabe1df2df394bc14aac20c68f67e8f8b085fa6b427cd",
     "rules": [
@@ -249,7 +243,7 @@ module.exports = {
     ]
   },
   "apps/lcars/lcars.app.js": {
-    "hash": "a305f73ee4e77b6534746ea79e699f700fd3db305f2b0289ef081d8869e1faf1",
+    "hash": "297b92373c9e8db3ba31cb3aa42909d18a1951eef9bd7e8e0847957aa411765d",
     "rules": [
       "no-unused-vars",
       "no-undef"
@@ -412,13 +406,6 @@ module.exports = {
       "no-unused-vars"
     ]
   },
-  "apps/doztime/app-bangle2.js": {
-    "hash": "81592fe1bc6537f80d7dbe7b2e8145924d2400f98ea780c68dd5bd9694376c8a",
-    "rules": [
-      "no-unused-vars",
-      "no-undef"
-    ]
-  },
   "apps/devstopwatch/app.js": {
     "hash": "28ca59e605f280a2d8fd4a74f553783205d51f8bb7042d6f51cf8ec11d44c264",
     "rules": [
@@ -514,12 +501,6 @@ module.exports = {
     "rules": [
       "no-unused-vars",
       "no-undef"
-    ]
-  },
-  "apps/astrocalc/astrocalc-app.js": {
-    "hash": "29f978064e42f947b36c94ab3f212512fb5d0a41fa265354c6039e2cf042b92c",
-    "rules": [
-      "no-unused-vars"
     ]
   },
   "apps/HRV/app.js": {
@@ -939,7 +920,7 @@ module.exports = {
     ]
   },
   "apps/kitchen/kitchen.app.js": {
-    "hash": "1ef7b31e52110e34fb952d7ba0426c8bd9574e5f18be9fbc3b8ad1cc762dda21",
+    "hash": "cea726937a7179851091b0728d3ad1e773eac703a5bfdc28be6e2f247fdd44c9",
     "rules": [
       "no-undef"
     ]
@@ -1017,7 +998,7 @@ module.exports = {
     ]
   },
   "apps/gpstouch/geotools.js": {
-    "hash": "5816fbb2dd630f574e5ee505e1b9ec6f80c3c53778b7a5520e5db28b91cdffc5",
+    "hash": "7e67733286f9d7708a54814f6f27d73ddffed2f433febc9604138f2f7a832cbf",
     "rules": [
       "no-undef"
     ]
@@ -1030,12 +1011,6 @@ module.exports = {
   },
   "apps/glbasic/glbasic.app.js": {
     "hash": "7d12a030d6f0ef69a0e5a9783229fd49c0a6a06bf751e3ac562145d2ce8350e9",
-    "rules": [
-      "no-undef"
-    ]
-  },
-  "apps/gipy/app.js": {
-    "hash": "41f342e8ef6f2a87b3aea19b75ee45cfdfeff723b94281049e3ae0ec89cddba5",
     "rules": [
       "no-undef"
     ]
@@ -1262,12 +1237,6 @@ module.exports = {
       "no-undef"
     ]
   },
-  "apps/accelrec/app.js": {
-    "hash": "b5369a60afc8f360f0b33f71080eb3f5d09a1bf3703acfcf07cd80dd19f1997d",
-    "rules": [
-      "no-undef"
-    ]
-  },
   "apps/BLEcontroller/app-joy.js": {
     "hash": "e4f34bb1bc11b52c3d7a1c537a140b0e23ccef82694dcd602cb517a8ba342898",
     "rules": [
@@ -1327,7 +1296,7 @@ module.exports = {
     ]
   },
   "apps/schoolCalendar/fullcalendar/main.js": {
-    "hash": "04dcd3cb3025c7aa67631d287b025a897b1cd984b8ea306abae2d722976fb7c5",
+    "hash": "8c417deb073328655117a93f045e77e9b808e84d584e648c6d7e360271ae8d07",
     "rules": [
       "no-undef",
       "no-unused-vars",
